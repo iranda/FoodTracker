@@ -56,6 +56,11 @@
                             <constraint firstAttribute="trailingMargin" secondItem="dOA-1q-K4S" secondAttribute="trailing" id="MoE-vu-c9b"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="meelNameLabel" destination="YA3-io-Lhp" id="2Cj-SO-WyS"/>
+                        <outlet property="nameTextFiel" destination="K8D-ju-t3j" id="cQq-hQ-Qrh"/>
+                        <outlet property="setDefaultLabelText" destination="MLj-of-Qen" id="QtG-Ro-zs3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
