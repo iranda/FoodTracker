@@ -34,5 +34,14 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>LSApplicationCategoryType</key>
+	<string>self.nameTextFiel.resignFirstResponder();
+//        
+//        let imagePickerController = UIImagePickerController();
+//        imagePickerController.sourceType = .photoLibrary;
+//        imagePickerController.delegate = self;
+//        present(imagePickerController, animated: true, completion: nil);</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string></string>
 </dict>
 </plist>

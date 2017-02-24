@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -42,29 +43,53 @@
                                         <state key="normal" title="Set default label text"/>
                                     </button>
                                 </subviews>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="MLj-of-Qen" secondAttribute="trailing" id="kDi-Tc-LzP"/>
                                     <constraint firstAttribute="trailing" secondItem="YA3-io-Lhp" secondAttribute="trailing" id="rTn-kT-hH0"/>
                                     <constraint firstAttribute="trailing" secondItem="K8D-ju-t3j" secondAttribute="trailing" id="wur-BO-74r"/>
                                 </constraints>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="Smb-oT-uiU">
+                                <rect key="frame" x="16" y="128" width="288" height="420"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Smb-oT-uiU" secondAttribute="height" multiplier="24:35" id="h7s-Fr-8vb"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="J7C-B5-pEZ" appends="YES" id="UNv-Ij-Bzb"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="dOA-1q-K4S" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="3ja-YP-pHv"/>
+                            <constraint firstItem="Smb-oT-uiU" firstAttribute="leading" secondItem="dOA-1q-K4S" secondAttribute="leading" id="Ac4-DF-3vW"/>
                             <constraint firstItem="dOA-1q-K4S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="C9n-Lo-JSi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dOA-1q-K4S" secondAttribute="trailing" id="MoE-vu-c9b"/>
+                            <constraint firstItem="Smb-oT-uiU" firstAttribute="top" secondItem="dOA-1q-K4S" secondAttribute="bottom" constant="7" id="RN3-gY-ccI"/>
+                            <constraint firstItem="Smb-oT-uiU" firstAttribute="trailing" secondItem="dOA-1q-K4S" secondAttribute="trailing" id="kzF-MC-x8l"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="meelNameLabel" destination="YA3-io-Lhp" id="2Cj-SO-WyS"/>
                         <outlet property="nameTextFiel" destination="K8D-ju-t3j" id="cQq-hQ-Qrh"/>
+                        <outlet property="photoImageView" destination="Smb-oT-uiU" id="DXg-sD-OdS"/>
                         <outlet property="setDefaultLabelText" destination="MLj-of-Qen" id="QtG-Ro-zs3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="J7C-B5-pEZ">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="N1o-bb-E2R"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="33.75" y="32.5"/>
+            <point key="canvasLocation" x="33.75" y="31.690140845070424"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="defaultPhoto" width="320" height="320"/>
+    </resources>
 </document>
