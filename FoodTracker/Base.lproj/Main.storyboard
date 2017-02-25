@@ -51,15 +51,19 @@
                                 </constraints>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="Smb-oT-uiU">
-                                <rect key="frame" x="16" y="128" width="288" height="420"/>
+                                <rect key="frame" x="16" y="128" width="288" height="288"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Smb-oT-uiU" secondAttribute="height" multiplier="24:35" id="h7s-Fr-8vb"/>
+                                    <constraint firstAttribute="width" secondItem="Smb-oT-uiU" secondAttribute="height" multiplier="1:1" id="h7s-Fr-8vb"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="J7C-B5-pEZ" appends="YES" id="UNv-Ij-Bzb"/>
                                 </connections>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Y3f-ME-1kQ" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                <rect key="frame" x="16" y="424" width="288" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
